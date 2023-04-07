@@ -18,8 +18,8 @@
 // movies2[2] = "Out of Africa";
 // movies2[3] = "Terms of Endearment";
 // movies2[4] = "The Woman King";
-// movies2.splice(3, 0, "Avatar")
-// console.log(movies2.length)
+// movies2.splice(3, 0, "Avatar");
+// console.log(movies2.length);
 
 //STEP 4
 // let movies3 = [];
@@ -42,7 +42,7 @@
 // movies4[6] = "Paris, Texas"
 // for (movie in movies4) {
 //     console.log(movies4[movie]);
-// }
+// };
 
 //STEP 6
 // let movies4 = [];
@@ -64,13 +64,73 @@
 // movies4[2] = "Out of Africa";
 // movies4[3] = "Terms of Endearment";
 // movies4[4] = "The Woman King";
-// movies4[5] = "Avatar"
-// movies4[6] = "Paris, Texas"
+// movies4[5] = "Avatar";
+// movies4[6] = "Paris, Texas";
 // for (movie of movies4.sort()) {
 //     console.log(movie);
-// }
+// };
 
 //STEP 8
+// let movies4 = [];
+// movies4[0] = "Lars and the Real Girl";
+// movies4[1] = "Rocky Horror Picture Show";
+// movies4[2] = "Out of Africa";
+// movies4[3] = "Terms of Endearment";
+// movies4[4] = "The Woman King";
+// movies4[5] = "Avatar"
+// movies4[6] = "Paris, Texas"
+
+// leastFavMovies = ["Jaws", "The Legend of Billy Jack", "Plandemic"];
+
+// console.log("Movies I like:");
+// console.log("");
+// for (movie of movies4) {
+//     console.log(movie);
+// }
+// console.log("");
+// console.log("Movies I regret watching:");
+// console.log("");
+// for (movie of leastFavMovies) {
+//     console.log(movie);
+// };
+
+//STEP 9
+// let movies4 = [];
+// movies4[0] = "Lars and the Real Girl";
+// movies4[1] = "Rocky Horror Picture Show";
+// movies4[2] = "Out of Africa";
+// movies4[3] = "Terms of Endearment";
+// movies4[4] = "The Woman King";
+// movies4[5] = "Avatar"
+// movies4[6] = "Paris, Texas"
+
+// leastFavMovies = ["Jaws", "The Legend of Billy Jack", "Plandemic"];
+
+// let movies = movies4.concat(leastFavMovies);
+// movies.sort().reverse();
+
+// for (movie of movies) {
+//     console.log(movie);
+// };
+
+//STEP 10
+// let movies4 = [];
+// movies4[0] = "Lars and the Real Girl";
+// movies4[1] = "Rocky Horror Picture Show";
+// movies4[2] = "Out of Africa";
+// movies4[3] = "Terms of Endearment";
+// movies4[4] = "The Woman King";
+// movies4[5] = "Avatar"
+// movies4[6] = "Paris, Texas"
+
+// leastFavMovies = ["Jaws", "The Legend of Billy Jack", "Plandemic"];
+
+// let movies = movies4.concat(leastFavMovies);
+// movies.sort().reverse();
+
+// console.log(movies.pop());
+
+//STEP 11
 let movies4 = [];
 movies4[0] = "Lars and the Real Girl";
 movies4[1] = "Rocky Horror Picture Show";
@@ -80,13 +140,12 @@ movies4[4] = "The Woman King";
 movies4[5] = "Avatar"
 movies4[6] = "Paris, Texas"
 
-leastFavMovies = ["Jaws", "The Legend of Billy Jack", "Plandemic"]
+leastFavMovies = ["Jaws", "The Legend of Billy Jack", "Plandemic"];
 
-//STEP 9
+let movies = movies4.concat(leastFavMovies);
+movies.sort().reverse();
 
-//STEP 10
-
-//STEP 11
+console.log(movies.shift());
 
 //STEP 12
 
