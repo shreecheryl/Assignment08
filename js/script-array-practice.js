@@ -80,6 +80,8 @@ movies4[4] = "The Woman King";
 movies4[5] = "Avatar"
 movies4[6] = "Paris, Texas"
 
+leastFavMovies = ["Jaws", "The Legend of Billy Jack", "Plandemic"]
+
 //STEP 9
 
 //STEP 10
