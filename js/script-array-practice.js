@@ -131,6 +131,23 @@
 // console.log(movies.pop());
 
 //STEP 11
+// let movies4 = [];
+// movies4[0] = "Lars and the Real Girl";
+// movies4[1] = "Rocky Horror Picture Show";
+// movies4[2] = "Out of Africa";
+// movies4[3] = "Terms of Endearment";
+// movies4[4] = "The Woman King";
+// movies4[5] = "Avatar"
+// movies4[6] = "Paris, Texas"
+
+// let leastFavMovies = ["Jaws", "The Legend of Billy Jack", "Plandemic"];
+
+// let movies = movies4.concat(leastFavMovies);
+// movies.sort().reverse();
+
+// console.log(movies.shift());
+
+//STEP 12
 let movies4 = [];
 movies4[0] = "Lars and the Real Girl";
 movies4[1] = "Rocky Horror Picture Show";
@@ -140,14 +157,17 @@ movies4[4] = "The Woman King";
 movies4[5] = "Avatar"
 movies4[6] = "Paris, Texas"
 
-leastFavMovies = ["Jaws", "The Legend of Billy Jack", "Plandemic"];
+let leastFavMovies = ["Jaws", "The Legend of Billy Jack", "Plandemic"];
 
 let movies = movies4.concat(leastFavMovies);
-movies.sort().reverse();
+let replacements = ["The Help", "I Am Not Your Negro", "Summer of Soul"]
 
-console.log(movies.shift());
+for (let i = 0; i < leastFavMovies.length; i++ ) {
+    let index = movies.findIndex( function ckMovie(movie) { return movie === leastFavMovies[i]; } );
+    movies[index] = replacements[i];
+}
 
-//STEP 12
+console.log(movies);
 
 //STEP 13
 
