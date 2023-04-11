@@ -27,8 +27,7 @@ function buildTable(list) {
             row.innerHTML += `<td>${employee[i]}</td>`;
         }
         row.innerHTML += `<td><button class="btn btn-danger btn-sm">X</button></td>`
-        let tableBody = $("tableBody");
-        tableBody.appendChild(row);
+        empTable.getElementsByTagName("tbody")[0].appendChild(row);
     }
 }
 
@@ -88,11 +87,10 @@ empTable.addEventListener('click', (e) => {
 // BUILD THE EMPLOYEES GRID
 function buildGrid(employees) {
     // REMOVE THE EXISTING SET OF ROWS BY REMOVING THE ENTIRE TBODY SECTION
-    tableBody.remove();
+    empTable.getElementsByTagName("tbody")[0].remove();
 
     // REBUILD THE TBODY FROM SCRATCH
-    let newBody = empTable.appendChild(document.createElement('tbody'));
-    newBody.setAttribute("id", "tableBody");
+    empTable.appendChild(document.createElement('tbody'));
 
     // LOOP THROUGH THE ARRAY OF EMPLOYEES
     // REBUILDING THE ROW STRUCTURE
