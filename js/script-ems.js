@@ -34,7 +34,6 @@ function buildTable(list) {
 
 buildTable(employees);
 
-
 // ADD EMPLOYEE
 form.addEventListener('submit', (e) => {
     // PREVENT FORM SUBMISSION
