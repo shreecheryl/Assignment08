@@ -12,12 +12,12 @@ if (localStorage.employees) {
     employees = JSON.parse(localStorage.employees);
 }
 
-console.log(employees);
-
 // GET DOM ELEMENTS
 const $ = (id) => document.getElementById(id);
 let form = $("addForm");
 let empTable = $("empTable");
+let empCount = $("empCount");
+empCount.innerHTML = ` (${employees.length})`;
 
 // BUILD THE EMPLOYEES TABLE WHEN THE PAGE LOADS
 function buildTable(list) {
@@ -26,6 +26,7 @@ function buildTable(list) {
         for (let i = 0; i < employee.length; i++) {
             row.innerHTML += `<td>${employee[i]}</td>`;
         }
+        row.innerHTML += `<td><button class="btn btn-danger btn-sm">X</button></td>`
         let tableBody = $("tableBody");
         tableBody.appendChild(row);
     }
@@ -65,16 +66,25 @@ form.addEventListener('submit', (e) => {
 });
 
 // DELETE EMPLOYEE
-//empTable.addEventListener('click', (e) => {
+empTable.addEventListener('click', (e) => {
     // CONFIRM THE DELETE
+    if (e.target.tagName == "BUTTON") {
+        let deletePerson = e.target.parentElement.parentElement.children[1].innerHTML;
+        let confirmed = confirm(`Are you sure you want to delete ${deletePerson}?`);
 
         // GET THE SELECTED ROWINDEX FOR THE TR (PARENTNODE.PARENTNODE)
-
+        if (confirmed) {
+            rowToDelete = e.target.parentElement.parentElement.rowIndex;
+        }
+        console.log(rowToDelete);
+    }
         // REMOVE EMPLOYEE FROM ARRAY
+        employees.splice(rowToDelete - 1, 1);
+        console.log(employees);
 
         // BUILD THE GRID
-
-//});
+        buildGrid(employees);
+});
 
 // BUILD THE EMPLOYEES GRID
 function buildGrid(employees) {
@@ -93,6 +103,7 @@ function buildGrid(employees) {
     // Note from Cheryl - Already done when creating tbody element
 
     // UPDATE EMPLOYEE COUNT
+    empCount.innerHTML = ` (${employees.length})`;
 
     // STORE THE ARRAY IN STORAGE
     localStorage.setItem("employees", JSON.stringify(employees));
