@@ -109,7 +109,7 @@
 // let movies = movies4.concat(leastFavMovies);
 // movies.sort().reverse();
 
-// for (movie of movies) {
+// for (let movie of movies) {
 //     console.log(movie);
 // }
 
