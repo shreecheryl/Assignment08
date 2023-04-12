@@ -21,7 +21,7 @@ empCount.innerHTML = ` (${employees.length})`;
 
 // BUILD THE EMPLOYEES TABLE WHEN THE PAGE LOADS
 function buildTable(list) {
-    for (employee of list) {
+    for (let employee of list) {
         let row = document.createElement("tr");
         for (let i = 0; i < employee.length; i++) {
             row.innerHTML += `<td>${employee[i]}</td>`;
